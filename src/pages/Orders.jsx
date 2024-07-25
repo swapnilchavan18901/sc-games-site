@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import Modal from "./modal";
 function Orders() {
   const [orderedproducts, setorderedproducts] = useState("");
 

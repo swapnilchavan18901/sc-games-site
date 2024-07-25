@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import ImageSlider from "./ImageSlider.jsx";
 
 import Recommended from "./Recommended";
-import Megasale from "./megasale";
+import ImageSlider from './../components/ImageSlider';
 
 const Home = () => {
   return (

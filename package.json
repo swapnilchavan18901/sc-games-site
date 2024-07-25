@@ -9,19 +9,23 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "hero-slider": "^3.1.0",
-    "react": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.3.1",
     "react-icons": "^4.9.0",
     "react-multi-carousel": "^2.8.4",
-    "react-scripts": "4.0.3",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.28.1",
+    "react-test-renderer": "^18.0.0",
     "redux": "^4.1.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.0",
     "swiper": "^9.3.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "webpack": "^5.92.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

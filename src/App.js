@@ -1,18 +1,18 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Details from "./components/Details";
-import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import Login from "./components/login";
-import SignUp from "./components/signup";
+import Details from './pages/Details';
+import Login from './pages/login';
+import SignUp from './components/signup';
+import Cart from './pages/Cart';
+import Orders from './pages/Orders';
+import Home from './pages/Home';
+import ProfilePage from './components/profilePage';
+import Paymentsuccessfull from './pages/paymentSuccessfull';
+import Paymentunsuccessful from './pages/paymentunsuccessful';
+import NavBar from './components/NavBar';
+import Modal from './components/modal';
 
-import Cart from "./components/Cart";
-import Orders from "./components/Orders";
-import Paymentunsuccessful from "./components/paymentunsuccessful";
-import Paymentsuccessfull from "./components/paymentSuccessfull";
-import ProfilePage from "./components/profilePage";
-import Modal from "./components/modal";
 
 function App() {
   return (
