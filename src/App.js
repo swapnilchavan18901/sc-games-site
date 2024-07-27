@@ -3,15 +3,15 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Details from './pages/Details';
 import Login from './pages/login';
-import SignUp from './components/signup';
+import SignUp from './pages/signup';
 import Cart from './pages/Cart';
 import Orders from './pages/Orders';
 import Home from './pages/Home';
-import ProfilePage from './components/profilePage';
 import Paymentsuccessfull from './pages/paymentSuccessfull';
 import Paymentunsuccessful from './pages/paymentunsuccessful';
 import NavBar from './components/NavBar';
 import Modal from './components/modal';
+import ProfilePage from './pages/profilePage';
 
 
 function App() {

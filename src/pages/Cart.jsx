@@ -85,7 +85,7 @@ const Cart = () => {
     <>
       <Container>
         {products.length === 0 ? (
-          <h2>Cart is empty</h2>
+          <h2>Add Games to Cart</h2>
         ) : (
           <Content>
             {products &&
@@ -142,7 +142,7 @@ export default Cart;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
+  
   align-items: center;
   gap: 20px;
 `;
@@ -158,12 +158,12 @@ const Content = styled.div`
   }
 `;
 const IN = styled.div`
-  // background-color: #003;
+  // background-color: #000;
   width: 300px;
   display: flex;
   flex-direction: column;
   z-index: -1;
-  color: white;
+  color: #000;
   span {
     margin: 15px;
     text-opacity: 1;

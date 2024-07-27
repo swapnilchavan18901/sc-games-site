@@ -91,7 +91,7 @@ const Div = styled.div`
 const Content = styled.div`
   position: absolute;
   color: #090b13;
-  border: 1px solid #fff;
+  border: 1px solid # 000;
   width: 400px;
   border-radius: 10px;
 `;
@@ -104,13 +104,13 @@ const Div2 = styled.div`
 const Label = styled.label`
   font-size: 15px;
   margin-left: 10px;
-  color: #ffff;
+  color: # 000f;
 `;
 const Input = styled.input`
   height: 30px;
   border-radius: 5px;
   margin: 10px;
-  border: 1px solid #fff;
+  border: 1px solid # 000;
   color: #090b13;
   font-size: 18px;
   text-align: center;
@@ -118,11 +118,11 @@ const Input = styled.input`
 
 const Button = styled.button`
   background-color: #003;
-  border: 2px solid #fff;
+  border: 2px solid # 000;
   width: 100px;
   height: 40px;
   margin: 20px;
   border-radius: 5px;
   font-size: 17px;
-  color: #fff;
+  color: # 000;
 `;

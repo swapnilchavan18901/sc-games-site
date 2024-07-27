@@ -9,6 +9,7 @@ function Orders() {
     let result = await fetch(`http://localhost:5000/api/v1/orders/${id}`);
     result = await result.json();
     setorderedproducts(result);
+    
   }
 
   const handleonrate = async (ide) => {
@@ -22,7 +23,9 @@ function Orders() {
   return (
     <>
       <Gcontainer id="abc">
-        {orderedproducts &&
+      {orderedproducts.length==0?(<h2 style={{color:"#000"}}>Buy Products to Unlock this Page</h2>):(
+
+        
           orderedproducts.map((product) => {
             return (
               <Container key={product._id}>
@@ -50,14 +53,16 @@ function Orders() {
                       onClick={() => {
                         handleonrate(product.productId);
                       }}
-                    >
+                      >
                       Rate the Game{" "}
                     </Button>
                   </NavLink>
                 </Content2>
+                
               </Container>
             );
-          })}
+          })
+        )}
       </Gcontainer>
     </>
   );
@@ -66,9 +71,11 @@ export default Orders;
 const Gcontainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content:center;
+  align-items:center;
   .btn:active {
     .abc {
-      background: white;
+      background:  #000;
     }
   }
 `;
@@ -80,7 +87,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px 20px 20px 20px;
-  border: 3px solid #fff;
+  border: 3px solid  #000;
 `;
 const Content1 = styled.div`
   img {
@@ -92,10 +99,10 @@ const Content1 = styled.div`
 const Content2 = styled.div`
   padding: 40px 40px 40px 40px;
   width: 100%;
-  border: 3px solid #ffff;
+  border: 3px solid  #000f;
 `;
 const Button = styled.button`
-  border: 2px solid #ffff;
+  border: 2px solid  #000f;
   height: 50px;
   width: 160px;
   margin-right: 10px;
@@ -112,7 +119,7 @@ const Sdiv = styled.div`
   margin-top: 10px;
   margin-bottom: 10px;
   span {
-    color: #fff;
+    color:  #000;
     font-weight: 700;
     font-size: 20px;
   }

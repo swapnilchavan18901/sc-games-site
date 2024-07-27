@@ -4,6 +4,7 @@ import axios from "axios";
 import "../components/slider.css";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Details() {
   const [product, setProduct] = useState("");
@@ -15,9 +16,11 @@ function Details() {
   const userid = localStorage.getItem("id");
 
   const cartAddid = localStorage.getItem("selectedGame");
+  const navigate = useNavigate();
+
 
   const Start = ({ selected, onSelected }) => {
-    return <FaStar color={"#fff"} />;
+    return <FaStar color={"# 000"} />;
   };
 
   const startGenerate = (numOfStarts) => {
@@ -43,8 +46,27 @@ function Details() {
     }
   }
 
+  const checkLoginandAddtoCart=async()=>{
+      console.log(userid)
+      if(userid!=null){
+        await handleAddtoCart();
+      }else{
+        navigate('/login')
+      }
+  } 
+  const checkLoginandBuy=async(amount)=>{
+      console.log(userid)
+      if(userid!=null){
+       await checkoutHandler(amount);
+      }else{
+        navigate('/login')
+      }
+  }
+
   const checkoutHandler = async (amount) => {
+
     let key, order;
+
     const data = await axios.get("http://localhost:5000/api/v1/razorpaykey");
 
     const result = await axios.post(
@@ -202,13 +224,13 @@ function Details() {
           </span>
         </Specifications>
         <BUT>
-          <BUTTON onClick={handleAddtoCart}>ADD TO CART</BUTTON>
-          <span>
+          <BUTTON onClick={checkLoginandAddtoCart}>ADD TO CART</BUTTON>
+         <span>
             <b> OR</b>
           </span>
           <BUTTON
             onClick={() => {
-              checkoutHandler(product.price);
+              checkLoginandBuy(product.price);
             }}
           >
             BUY NOW ₹{product && product.price}
@@ -254,7 +276,7 @@ const BGCONTAINER = styled.div`
 `;
 const REVIEWHEADER = styled.div`
   font-size: 40px;
-  color: #fff;
+  color: # 000;
 `;
 const Content2 = styled.div`
   display: grid;
@@ -280,7 +302,7 @@ const Label = styled.div`
   text-transform: uppercase;
   padding-right: 20px;
   font-size: 25px;
-  color: #fff;
+  color: # 000;
   @media (max-width: 400px) {
     width: 200px;
     font-size: 25px;
@@ -289,7 +311,7 @@ const Label = styled.div`
 const Message = styled.div`
   font-size: 18px;
   width: 600px;
-  color: #fff;
+  color: # 000;
   padding-left: 10px;
   @media (max-width: 400px) {
     width: 370px;
@@ -301,7 +323,7 @@ const CARD = styled.div`
   // height: 100px;
   display: flex;
   flex-direction: column;
-  border: 4px solid #ffff;
+  border: 4px solid  #000;
   border-radius: 20px;
   height: 200px;
   @media (max-width: 400px) {
@@ -317,7 +339,7 @@ const Content = styled.div`
   align-items: center;
   gap: 20px;
   margin-top: 30px;
-  color: #ffff;
+  color:  #000;
   @media (max-width: 400px) {
     width: 370px;
 
@@ -361,7 +383,7 @@ const BUTTON = styled.button`
   height: 60px;
   width: 200px;
   padding: 20px, 20px, 20px, 20px;
-  border: 3px solid white;
+  border: 3px solid  #000;
   color: #000;
   background-color: rgb(255, 235, 59, 1);
   font-weight: 700;

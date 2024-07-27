@@ -42,7 +42,7 @@ const Modal = (open) => {
   const Start = ({ selected, onSelected }) => {
     return (
       <FaStar
-        color={selected ? "#ffff" : "gray"}
+        color={selected ? "#000" : "gray"}
         size={40}
         onClick={onSelected}
       />
@@ -79,7 +79,7 @@ const Modal = (open) => {
 export default Modal;
 const DIV = styled.div`
   display: flex;
-  color: #ffff;
+  color: #000;
 
   height: 80vh;
 
@@ -89,9 +89,9 @@ const DIV = styled.div`
 const DIV2 = styled.div`
   display: flex;
 
-  background: #003;
+  border-radius:5px;
 
-  border: 3px solid #fff;
+  border: 3px solid #000;
   width: 400px;
 
   height: 300px;
@@ -110,8 +110,7 @@ const RATING = styled.div`
 const MESSAGE = styled.textarea`
   height: 80px;
   width: 300px;
-  color: #fff;
-  background: #003;
+  color: #000;
   font-size: 16px;
   padding: 15px 15px 15px 15px;
 `;
@@ -124,16 +123,15 @@ const SDIV = styled.div`
   gap: 60px;
 `;
 const SUBMIT = styled.button`
-  border: 2px solid #ffff;
+  border: 2px solid #000;
   padding: 15px 15px 15px 15px;
-  background: #003;
-  color: #fff;
+  color: #000;
   cursor: pointer;
-`;
-const CLOSE = styled.button`
+  border-radius:5px;
+  `;
+  const CLOSE = styled.button`
   cursor: pointer;
-  border: 2px solid #ffff;
+  border: 2px solid #000;
   padding: 15px 15px 15px 15px;
-  background: #003;
-  color: #fff;
+  color: #000;
 `;

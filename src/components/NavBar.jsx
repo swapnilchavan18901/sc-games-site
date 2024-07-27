@@ -23,7 +23,7 @@ function NavBar() {
               <span>Orders</span>
             </NavLink>
             <NavLink className="a" to="/cart">
-              <span>Add to Cart</span>
+              <span>Cart</span>
             </NavLink>
             <NavLink className="a" to="/profile">
               <span>Profile</span>
@@ -56,7 +56,7 @@ const Navbar = styled.nav`
   // justify-content: center;
   padding: 0 36px;
   overflow-x: hidden;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #000;
   margin-bottom: 20px;
   @media (max-width: 400px) {
     padding: 0 0px;
@@ -72,16 +72,16 @@ const Logo = styled.div`
   font-size: 25px;
   margin-left: 70px;
   letter-spacing: 1.5px;
-  color: #ffff;
+  color: #000;
 
   span {
     position: relative;
-    color: #ffff;
+    color: #000;
     &:after {
       content: "";
       height: 2px;
       position: absolute;
-      background: #ffff;
+      background: #000;
 
       left: 0;
       right: 0;
@@ -119,7 +119,7 @@ const NavMenu = styled.div`
     display: flex;
     // align-items: center;
     padding: 0 12px;
-    color: #ffff;
+    color: #000;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
@@ -133,14 +133,14 @@ const NavMenu = styled.div`
         content: "";
         height: 2px;
         position: absolute;
-        background: #fff;
+        background: #000;
         left: 0;
         right: 0;
         bottom: -6px;
         opacity: 0;
         transform-origin: left center;
         transform: scaleX(0);
-        color: #ffff;
+        color: #000;
         transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
       }
     }

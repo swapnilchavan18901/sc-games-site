@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import Recommended from "./Recommended";
 import ImageSlider from './../components/ImageSlider';
+import Recommended from './../components/Recommended';
 
 const Home = () => {
   return (

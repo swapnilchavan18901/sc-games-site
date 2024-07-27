@@ -10,7 +10,7 @@ const paymentsuccessfull = () => {
           window.location.href = "/";
         }}
       >
-        Home
+        Continue Shopping &#8594;
       </Button>
     </Container>
   );
@@ -20,11 +20,11 @@ export default paymentsuccessfull;
 const Container = styled.div`
   display: flex;
   height: 80vh;
-  color: #fff;
+  color: #000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
 `;
 const Button = styled.button`
@@ -34,7 +34,7 @@ const Button = styled.button`
   background: yellow;
   border: 2px solid yellow;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   cursor: pointer;
 `;

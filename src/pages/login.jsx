@@ -26,7 +26,7 @@ function Login() {
       localStorage.setItem("name", result.userName);
       localStorage.setItem("email", result.user);
       localStorage.setItem("profile", result.profileimage);
-      console.log(result);
+      console.log(result.profileimage);
       navigated("/");
     } else {
       alert("Please Enter Correct Details");
@@ -76,10 +76,9 @@ const Div = styled.div`
   justify-content: center;
 `;
 const Content = styled.div`
-  border: 3px solid #ffff;
+  border: 3px solid  #000;
   position: absolute;
-  color: #fff;
-
+  color:  #000;
   width: 400px;
   border-radius: 10px;
 `;
@@ -98,18 +97,18 @@ const Input = styled.input`
   border-radius: 5px;
   margin: 10px;
   border: 1px solid #090b13;
-  color: #090b13;
+  color: #000;
   font-size: 18px;
   text-align: center;
 `;
 
 const Button = styled.button`
-  background-color: #003;
-  border: 2px solid #ffff;
+  border: 2px solid  #000;
   width: 100px;
   height: 40px;
   margin: 20px;
   border-radius: 5px;
   font-size: 17px;
-  color: white;
+  color: #000;
+  cursor:pointer;
 `;

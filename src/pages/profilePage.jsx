@@ -26,6 +26,7 @@ function ProfilePage() {
         setphoto(res.data.profileimage);
         setemail(res.data.email);
         setName(res.data.name);
+        console.log( res.data.profileimage)
         localStorage.setItem("profile", res.data.profileimage);
         localStorage.setItem("email", res.data.email);
         localStorage.setItem("name", res.data.name);
@@ -115,12 +116,11 @@ const IMG = styled.img`
   border-radius: 400px;
 `;
 const Content = styled.div`
-  border: 3px solid #ffff;
+  border: 3px solid #000;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: #000;
   align-items: center;
-
   border-radius: 10px;
 `;
 const Div2 = styled.div`
@@ -140,21 +140,21 @@ const Input = styled.input`
   height: 30px;
   border-radius: 5px;
   margin: 10px;
-  border: 1px solid #fff;
-  color: #fff;
-  background: #003;
+  border: 1px solid #000;
+  color: #000;
+  background: #fff;
   font-size: 18px;
   text-align: center;
 `;
 
 const Button = styled.button`
-  background-color: #003;
-  border: 2px solid #ffff;
+  background-color: #fff;
+  border: 2px solid #000f;
   width: 100px;
   height: 40px;
   margin: 20px;
   border-radius: 5px;
   font-size: 17px;
-  color: white;
+  color: #000;
   cursor: pointer;
 `;

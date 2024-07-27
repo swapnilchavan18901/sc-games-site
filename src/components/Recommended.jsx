@@ -36,19 +36,7 @@ const Recommended = () => {
                   {<IG src={product.banner} alt="" />}
                   <IN className="IN">
                     <span>{product.name}</span>
-                    <Sdiv className="Sdiv">
-                      {product.Xbox && product.Xbox ? (
-                        <IMG src={xbox} />
-                      ) : (
-                        <></>
-                      )}
-                      {product.PC && product.PC ? <IMG src={pc} /> : <></>}
-                      {product.playStation && product.playStation ? (
-                        <IMG src={plstn} />
-                      ) : (
-                        <></>
-                      )}
-                    </Sdiv>
+                    
                   </IN>
                 </Wrap>
               </NavLink>
@@ -89,7 +77,7 @@ const Content = styled.div`
   grid-gap: 25px;
   padding-left: 20px;
   padding-right: 20px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   @media (max-width: 400px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 5px;
@@ -101,13 +89,13 @@ const IN = styled.div`
   display: flex;
   flex-direction: column;
   z-index: -1;
-  color: white;
+  color: #000;
   span {
     margin: 15px;
     text-opacity: 1;
   }
 
-  font-size: 20px;
+  font-size: 15px;
   @media (max-width: 400px) {
     align-items: center;
     font-size: 10px;
@@ -131,9 +119,9 @@ const Wrap = styled.div`
   border: 3px solid rgba(249, 249, 249, 0.1);
   border-radius: 10px;
   margin-top: 20px;
-  height: 450px;
+  height: 350px;
   padding: 10px 10px 10px 10px;
-  width: 270px;
+  width: 230px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -167,10 +155,11 @@ const IMG = styled.img`
 const Sdiv = styled.div`
   height: 30px;
   width: 400px;
-  background: black;
+  // background: black;
+color:#000;
   z-index: -1;
   padding: 7px 7px 7px 7px;
-  background: transparent;
+  // background: transparent;
   &:hover {
     z-index: 1;
   }
